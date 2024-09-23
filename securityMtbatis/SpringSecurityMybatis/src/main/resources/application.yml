@@ -1,0 +1,26 @@
+spring:
+  config:
+    import:
+      - application-secret.yml
+  datasource:
+    url: jdbc:h2:file./data/auth_db;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    initialization-mode: NEVER
+    schema: classpath:schema.sql
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+mybatis:
+  mapper-locations:
+    - /mappers/*.xml
+
+user:
+  profile:
+    img:
+      default: 'https://firebasestorage.googleapis.com/v0/b/userprofile-6e688.appspot.com/o/user%2Fdefault.png?alt=media&token=c465c073-1626-4c0c-b894-360013aeeba1'
+

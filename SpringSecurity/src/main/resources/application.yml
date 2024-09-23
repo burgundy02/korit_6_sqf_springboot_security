@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/auth_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+#      create: 칼럼, 테이블등을 새로 만든다.
+      ddl-auto: update
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+jwt:
+  secreat: a41b486a96224ee031b0f156bcb256f7150213bf8627a6fdcc01af4c29c71450ba53495e4e217e0ae94a573de8b961600dcf141fc1c9eda995856541fa76c83719f356c6802c36eaa81832445757a509b3e7e3a0e87631854503be2d7d942b6fa9beea2c930ff3398f188ce82481e4e09ed6dcaf91f1c15a7a40ae92c64691708369d9f7294f3e3493fe6fc954f51fce79a988ed6b36bc70e71095f840eb1bbce2513227ac4120341b36626f69a0e93a32b20ab8450958dc75cec56e61eac6c518d2303769e17dbd40b2d9224e5e4ed0b5bca1a765428ae4e2b4c92f0d17afdfd468471369202bcfc0e13b657c4074ca0b9d8356cf71e296f138b6ae1215ff45
